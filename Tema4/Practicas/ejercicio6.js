@@ -1,12 +1,8 @@
 function ejercicio6(string) {
   let numeroDeVeces = 0;
-
   let acumulador = 1;
-
   let numeroComprobador = 11;
-
   let numeroAuxiliar = 0;
-
   let arrayNumero = undefined;
 
   if (parseInt(string) < 10) {
@@ -35,6 +31,6 @@ function ejercicio6(string) {
   return numeroDeVeces;
 }
 
-let numero = ejercicio6("39");
+let numero = ejercicio6("999");
 
 console.log(numero);
