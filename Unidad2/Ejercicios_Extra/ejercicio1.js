@@ -13,9 +13,9 @@ function ejercicio1(array, target){
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length; j++) {
             if (i === j) continue;
-            
             if(array[i] + array[j] === target){
-                resultado = array.findIndex(num => num === array[i]) + " " + array.findIndex(num => num === array[j]) 
+                /*Se puede hacer solo con I y J como index pero dejo el findIndex para saber como hacerlo */
+                resultado = "Index " + array.findIndex(num => num === array[i]) + " " + array[i] + " +" + " Index " + array.findIndex(num => num === array[j]) + array[j] + " = " + target
                 return resultado
             }
         }
