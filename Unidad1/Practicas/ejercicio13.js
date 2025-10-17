@@ -12,47 +12,41 @@ hasta que se genera la última fila, con un solo color.
 
 */
 
+function ejercicio13(string) {
+  let array = string.split("");
 
+  const arraySiguiente = [];
 
-function ejercicio13(string){
-
-    let array = string.split("")
-
-    const arraySiguiente = []
-
-    for (let i = 0; i < array.length; i++) {
-        let letraAux1 = array[i]
-        let letraAux2 = array[i+1]
-        if (letraAux1 === "R" && letraAux2 === "R") {
-        arraySiguiente.push("R");
+  for (let i = 0; i < array.length; i++) {
+    let letraAux1 = array[i];
+    let letraAux2 = array[i + 1];
+    if (letraAux1 === "R" && letraAux2 === "R") {
+      arraySiguiente.push("R");
     } else if (letraAux1 === "R" && letraAux2 === "G") {
-        arraySiguiente.push("B");
+      arraySiguiente.push("B");
     } else if (letraAux1 === "R" && letraAux2 === "B") {
-        arraySiguiente.push("G");
+      arraySiguiente.push("G");
     } else if (letraAux1 === "G" && letraAux2 === "R") {
-        arraySiguiente.push("B");
+      arraySiguiente.push("B");
     } else if (letraAux1 === "G" && letraAux2 === "G") {
-        arraySiguiente.push("G");
+      arraySiguiente.push("G");
     } else if (letraAux1 === "G" && letraAux2 === "B") {
-        arraySiguiente.push("R");
+      arraySiguiente.push("R");
     } else if (letraAux1 === "B" && letraAux2 === "R") {
-        arraySiguiente.push("G");
+      arraySiguiente.push("G");
     } else if (letraAux1 === "B" && letraAux2 === "G") {
-        arraySiguiente.push("R");
+      arraySiguiente.push("R");
     } else if (letraAux1 === "B" && letraAux2 === "B") {
-        arraySiguiente.push("B");
+      arraySiguiente.push("B");
     }
-        
-    }
+  }
 
-    if(arraySiguiente.length > 1){
-        return ejercicio13(arraySiguiente.join(""))
-    }else{
-        return arraySiguiente.join("")
-    }
+  if (arraySiguiente.length > 1) {
+    console.log(arraySiguiente);
+    return ejercicio13(arraySiguiente.join(""));
+  } else {
+    return arraySiguiente.join("");
+  }
 }
 
-
-
-
-console.log(ejercicio13("RRGBRGBB"))
+console.log(ejercicio13("RRGBRGBB"));
