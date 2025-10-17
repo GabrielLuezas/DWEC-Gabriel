@@ -16,10 +16,11 @@ function ejercicio2(str) {
     for (let i = 0; i < array.length; i++) {
        if (!cadenaAux.includes(array[i])) {
             cadenaAux += array[i];
-        } else {
+       }else{
             if (cadenaAux.length > 0) {
                 arrayFinal.push(cadenaAux);
             }
+            
             const index = cadenaAux.indexOf(array[i]);
             cadenaAux = cadenaAux.slice(index + 1) + array[i];
         }
