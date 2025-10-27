@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Factorial</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js" type="module"></script>
+</head>
+<body>
+  <h1>Calculadora de Factorial</h1>
+
+  <form id="formFactorial">
+    <label for="numero">Número:</label>
+    <input type="number" id="numero" min="0" required>
+    <button type="submit">Calcular</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <div id="historial">
+    <h2>Historial de resultados</h2>
+    <ul id="listaHistorial"></ul>
+  </div>
+
+</body>
+</html>

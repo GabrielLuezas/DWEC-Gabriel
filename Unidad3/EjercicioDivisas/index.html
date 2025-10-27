@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="main.js" type="module"></script>
+    <script defer src="constant.js" type="module"></script>
+    <script defer src="divisaExchange.js" type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <form action="" method="get">
+        <label>Importe <input type="number" id="numero" /></label>
+        <label>
+          De :
+          <select id="valor1">
+            <option value="Euro">Euro</option>
+            <option value="Libra">Libra</option>
+            <option value="Dolar">Dolar</option>
+          </select></label
+        >
+        <label>
+          A :
+          <select id="valor2">
+            <option value="Euro">Euro</option>
+            <option value="Libra">Libra</option>
+            <option value="Dolar">Dolar</option>
+          </select></label
+        >
+        <input id="botonCambiar" type="submit" value="Convertir" />
+      </form>
+    </main>
+    <section id="Historico">
+      <h1>Historico</h1>
+    </section>
+  </body>
+</html>
