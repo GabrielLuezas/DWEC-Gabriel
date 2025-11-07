@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid con Áreas</title>
+<style>
+  .layout {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+      "header header header"
+      "menu contenido sidebar"
+      "footer footer footer";
+    height: 100vh;
+  }
+
+  header   { grid-area: header; background: #3b82f6; color: white; }
+  nav      { grid-area: menu; background: #60a5fa; }
+  main     { grid-area: contenido; background: #e0f2fe; }
+  aside    { grid-area: sidebar; background: #93c5fd; }
+  footer   { grid-area: footer; background: #1e3a8a; color: white; }
+
+  header, nav, main, aside, footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <header>Encabezado</header>
+  <nav>Menú</nav>
+  <main>Contenido</main>
+  <aside>Sidebar</aside>
+  <footer>Pie</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo Flexbox</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    display: flex;               /* Activa flexbox */
+    justify-content: space-around; /* Distribuye los elementos con espacio igual */
+    align-items: center;         /* Centra verticalmente */
+    background-color: #333;
+    color: white;
+    padding: 1em;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .navbar a:hover {
+    color: #ffcc00;
+  }
+</style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Acerca</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+</body>
+</html>
