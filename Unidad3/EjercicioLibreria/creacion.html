@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear libro</title>
+    <link rel="stylesheet" href="css/creacion.css" />
+  </head>
+  <body>
+    <header>
+      <a href="home.html">
+        <img src="img/comercio.png" alt="Comercio" class="logo" />
+      </a>
+      <h1>Crear libro</h1>
+    </header>
+
+    <main>
+      <form id="crearLibro">
+        <label>Nombre del autor:</label>
+        <input id="nombre" required />
+
+        <label>Número de páginas:</label>
+        <input id="paginas" type="number" required />
+
+        <label>
+          <input type="checkbox" id="prestado" />
+          Prestado
+        </label>
+
+        <button type="submit">Crear libro</button>
+      </form>
+    </main>
+
+    <script type="module" src="js/creacion.js"></script>
+  </body>
+</html>

@@ -1,10 +1,10 @@
 const form = document.getElementById("formulario");
 const historial = document.getElementById("historial");
+const botonAlerta = document.getElementById("mostrar-alerta");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Evitar que el formulario se envíe
+  event.preventDefault();
 
-  // Recoger todos los valores
   const numero = document.getElementById("numero").valueAsNumber;
   const texto = document.getElementById("texto").value;
   const correo = document.getElementById("correo").value;
@@ -14,9 +14,8 @@ form.addEventListener("submit", (event) => {
   const fecha = document.getElementById("fecha").value;
   const color = document.getElementById("color").value;
   const rango = document.getElementById("rango").valueAsNumber;
-  const archivo = document.getElementById("archivo").files[0]; // Solo el primero
+  const archivo = document.getElementById("archivo").files[0];
 
-  // Crear un nuevo párrafo con todos los valores
   const p = document.createElement("p");
   p.innerHTML = `
     Número: ${numero} <br>
@@ -32,6 +31,11 @@ form.addEventListener("submit", (event) => {
   `;
   historial.prepend(p);
 
-  // Opcional: limpiar campos
-  // form.reset();
+  form.reset();
+});
+
+// Nuevo botón: muestra un alert con un mensaje
+botonAlerta.addEventListener("click", () => {
+  const texto = document.getElementById("texto").value;
+  alert(`El texto actual del input es: "${texto}"`);
 });
