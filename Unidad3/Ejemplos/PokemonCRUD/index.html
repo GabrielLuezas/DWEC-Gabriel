@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD de Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestor de Pokémon</h1>
+
+    <form id="pokemonForm">
+      <input type="hidden" id="pokemonId">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="tipo">Tipo:</label>
+      <input type="text" id="tipo" required>
+
+      <label for="nivel">Nivel:</label>
+      <input type="number" id="nivel" min="1" required>
+
+      <label for="hp">HP:</label>
+      <input type="number" id="hp" min="1" required>
+
+      <button type="submit" id="guardarBtn">Guardar Pokémon</button>
+    </form>
+
+    <button id="guardarLocal" class="boton guardar">💾 Guardar en localStorage</button>
+    <button id="cargarLocal" class="boton guardar">Cargar de local</button>
+
+    <h2>Lista de Pokémon</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Nivel</th>
+          <th>HP</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="pokemonTableBody"></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

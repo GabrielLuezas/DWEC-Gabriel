@@ -3,37 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ejemplo Grid</title>
+<title>Ejemplo Grid Completo</title>
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
   }
 
-  .grid-container {
-    display: grid; /* Activa Grid Layout */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 20px; /* Espacio entre celdas */
-    padding: 20px;
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    grid-template-rows: 80px 1fr 60px; 
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    height: 100vh;
   }
 
-  .card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    padding: 20px;
-    text-align: center;
+  header {
+    grid-area: header;
+    background: #3b82f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  aside {
+    grid-area: sidebar;
+    background: #2563eb;
+    color: white;
+    padding: 1em;
+  }
+
+  main {
+    grid-area: main;
+    background: #e0f2fe;
+    padding: 1em;
+  }
+
+  footer {
+    grid-area: footer;
+    background: #1e3a8a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
 </head>
 <body>
 
-  <div class="grid-container">
-    <div class="card">Tarjeta 1</div>
-    <div class="card">Tarjeta 2</div>
-    <div class="card">Tarjeta 3</div>
-    <div class="card">Tarjeta 4</div>
+  <div class="grid-layout">
+    <header>Encabezado</header>
+    <aside>Menú lateral</aside>
+    <main>Contenido principal</main>
+    <footer>Pie de página</footer>
   </div>
 
 </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task Manager Pro</h1>
+    <section id="task-form">
+        <input type="text" id="task-title" placeholder="Título de la tarea">
+        <textarea id="task-desc" placeholder="Descripción"></textarea>
+        <select id="task-priority">
+            <option value="low">Baja</option>
+            <option value="normal" selected>Normal</option>
+            <option value="high">Alta</option>
+        </select>
+        <button id="add-task">Añadir Tarea</button>
+    </section>
+
+    <section id="filters">
+        <select id="filter-priority">
+            <option value="all">Todas</option>
+            <option value="low">Baja</option>
+            <option value="normal">Normal</option>
+            <option value="high">Alta</option>
+        </select>
+        <select id="filter-status">
+            <option value="all">Todas</option>
+            <option value="done">Completadas</option>
+            <option value="pending">Pendientes</option>
+        </select>
+        <button id="apply-filters">Filtrar</button>
+    </section>
+
+    <section id="task-list"></section>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
