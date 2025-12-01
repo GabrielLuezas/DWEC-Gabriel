@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Pokémon con Patrones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>CRUD Pokémon con Patrones</h1>
+  </header>
+
+  <main>
+
+    <section aria-label="Formulario CRUD">
+      <h2>Gestión de Pokémon</h2>
+
+      <form id="formPokemon">
+        
+        <label>
+          Nombre:
+          <input type="text" id="nombre" required>
+        </label>
+
+        <label>
+          Tipo:
+          <input type="text" id="tipo" required>
+        </label>
+
+        <label>
+          Operación:
+          <select id="operacion">
+            <option value="create">Crear</option>
+            <option value="update">Actualizar</option>
+            <option value="delete">Eliminar</option>
+            <option value="read">Leer</option>
+          </select>
+        </label>
+
+        <button type="submit">Ejecutar</button>
+      </form>
+    </section>
+
+    <section aria-label="Listado Pokémon">
+      <h2>Pokémon guardados</h2>
+      <section id="contenedor" class="cards-container"></section>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Práctica de patrones: Singleton · Facade · Strategy</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

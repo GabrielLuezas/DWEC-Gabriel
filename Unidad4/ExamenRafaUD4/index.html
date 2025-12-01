@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ExamenUT4</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Thomas y sus Amigos: Gestor de Trebes</h1>
+    </header>
+
+    <main>
+      <section aria-label="Crear Trenes">
+        <h2>Registrar Nuevo Tren</h2>
+
+        <form id="formTrenes">
+          <label>
+            Nombre:
+            <input type="text" id="nombre" required />
+          </label>
+
+          <label>
+            Tipo:
+            <select id="tipo">
+              <option value="Vapor">Vapor</option>
+              <option value="Diésel">Diésel</option>
+              <option value="Eléctrico">Eléctrico</option>
+              <option value="Maglev">Maglev</option>
+            </select>
+          </label>
+
+          <label>
+            Velocidad (km/h):
+            <input type="number" id="velocidad" required min="10" max="300" />
+          </label>
+
+          <button type="submit">Añadir Tren</button>
+        </form>
+      </section>
+
+      <section aria-label="Simulador Viajes">
+        <h2>Simulador de Viajes</h2>
+
+        <form id="formSimulador">
+          <label>
+            Estacion Origen:
+            <select id="estacioOrigen">
+              <option value="Sodor Central">Sodor Central</option>
+              <option value="Knapford">Knapford</option>
+              <option value="Vicarstown">Vicarstown</option>
+              <option value="Tidmouth Sheds">Tidmouth Sheds</option>
+            </select>
+          </label>
+
+          <label>
+            Estacion Destino:
+            <select id="estacionDestino">
+              <option value="Sodor Central">Sodor Central</option>
+              <option value="Knapford">Knapford</option>
+              <option value="Vicarstown">Vicarstown</option>
+              <option value="Tidmouth Sheds">Tidmouth Sheds</option>
+            </select>
+          </label>
+          <label>
+            Selecciona Tren:
+            <select id="trenesDisponibles"></select>
+          </label>
+
+          <button type="submit">Simular Viaje</button>
+        </form>
+        <section id="contendorSimulador" class="cards-container"></section>
+      </section>
+
+      <section aria-label="Listado Trenes">
+        <h2>Listado de Trenes</h2>
+        <label>
+          <input type="text" id="filtrado" required />
+        </label>
+        <button id="btnFiltrar">Search</button>
+        <section id="contenedorTrenes" class="cards-container"></section>
+        <button id="borrarTrenes">Borrar Todos los Trenes</button>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

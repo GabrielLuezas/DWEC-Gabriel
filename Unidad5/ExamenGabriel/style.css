@@ -1,0 +1,22 @@
+.hidden {
+  display: none !important;
+}
+
+#imagenBarcoDefault {
+  width: 10%;
+}
+
+#contendorArriba {
+  background-color: gray;
+  color: white;
+}
+
+.divJuego {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imagen {
+  width: 10%;
+}

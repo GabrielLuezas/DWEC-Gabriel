@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Bolas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="auth-container">
+      <!-- Login View -->
+      <div id="login-view" class="hidden">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="login-username" placeholder="Usuario" />
+        <input type="password" id="login-password" placeholder="Contraseña" />
+        <button id="login-btn">Entrar</button>
+        <p>
+          ¿No tienes cuenta? <a href="#" id="show-register">Regístrate aquí</a>
+        </p>
+        <p id="login-message" class="message"></p>
+      </div>
+
+      <!-- Register View -->
+      <div id="register-view">
+        <h2>Registro de Usuario</h2>
+        <input type="text" id="reg-username" placeholder="Usuario" />
+        <input type="password" id="reg-password" placeholder="Contraseña" />
+        <select id="reg-rol">
+          <option value="usuario">Jugador</option>
+          <option value="admin">Administrador</option>
+        </select>
+        <button id="register-btn">Crear Cuenta</button>
+        <p>¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión</a></p>
+        <p id="reg-message" class="message"></p>
+      </div>
+    </div>
+
+    <div id="admin-dashboard" class="hidden">
+      <h2>Panel de Administración</h2>
+      <div id="admin-controls">
+        <button id="admin-logout">Cerrar Sesión</button>
+      </div>
+      <table id="users-table">
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Puntuación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="users-list">
+          <!-- Users will be populated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div id="game-setup" class="hidden">
+      <button id="game-logout" style="float: right; background: #ff4444">
+        Salir
+      </button>
+      <h2>Configuración del Juego</h2>
+      <p>
+        Introduce un número de bolas (entre 15 y <span id="max-balls"></span>):
+      </p>
+      <input type="number" id="ball-count" />
+      <button id="start-game-btn">Jugar</button>
+      <p id="setup-message"></p>
+    </div>
+
+    <div id="game-container" class="hidden">
+      <div id="score-display">Puntos: <span id="score">0</span></div>
+      <div id="game-area"></div>
+    </div>
+
+    <div id="game-over" class="hidden">
+      <h2>¡Juego Terminado!</h2>
+      <p>Tu puntuación final: <span id="final-score"></span></p>
+      <button id="replay-btn">Volver a Jugar</button>
+      <button id="back-menu-btn">Menú Principal</button>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="edit-modal" class="hidden">
+      <div class="modal-content">
+        <h3>Editar Usuario</h3>
+        <input type="hidden" id="edit-original-username" />
+        <label>Contraseña:</label>
+        <input type="text" id="edit-password" placeholder="Nueva contraseña" />
+        <label>Puntuación:</label>
+        <input type="number" id="edit-score" />
+        <label>Rol:</label>
+        <select id="edit-rol">
+          <option value="usuario">Jugador</option>
+          <option value="admin">Administrador</option>
+        </select>
+        <div class="modal-actions">
+          <button id="save-edit-btn">Guardar</button>
+          <button id="cancel-edit-btn" style="background: #ccc; color: black">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="Usuario.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
