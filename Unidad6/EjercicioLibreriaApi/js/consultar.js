@@ -1,15 +1,12 @@
 const contenedor = document.getElementById("contenedorLibros");
 
-let arrayLibros = await fetch("http://127.0.0.1:8000/libros", {
-  mode: "no-cors",
-}).then(async (response) => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
-  }
-  let libros = await response.json();
+let arrayLibros = await fetch("http://127.0.0.1:7777/libros").then(
+  async (response) => {
+    let libros = await response.json();
 
-  return libros;
-});
+    return libros;
+  }
+);
 
 function mostrarLibros() {
   contenedor.innerHTML = "";

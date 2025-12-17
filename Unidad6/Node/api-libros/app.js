@@ -21,12 +21,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-const options = {
-  //Especificar la ruta de vuestra aplicación
-  origin: "http://localhost:3000",
-};
-
-app.use(cors(options));
+app.use(
+  cors({
+    origin: ["http://localhost:8000", "http://127.0.0.1:8000"],
+  })
+);
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
